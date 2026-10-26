@@ -10,12 +10,9 @@ namespace Tyuiu.KorovinIK.Sprint3.Task4.V30.Lib
             {
                 if (x == 0)
                 {
-                    break;
+                    continue;
                 }
-                else
-                {
-                    res = res + (Math.Sin(x) / x);
-                }
+                 res = res + (Math.Sin(x) / x);
             }
             return Math.Round(res, 3);
         }
