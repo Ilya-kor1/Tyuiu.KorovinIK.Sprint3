@@ -1,0 +1,71 @@
+﻿using Tyuiu.KorovinIK.Sprint3.Task7.V3.Lib;
+namespace Tyuiu.KorovinIK.Sprint3.Task7.V3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            DataService ds = new DataService();
+            Console.Title = "Спринт #3 | Выполнил: Коровин И. К. | ИСТНб-26-1";
+
+            Console.WriteLine("***************" +
+                "**************************************************************");
+
+            Console.WriteLine("* Спринт #3                                                                *");
+
+            Console.WriteLine("* : Добавление к решению итоговых проектов по спринту               *");
+
+            Console.WriteLine("* Задание #7                                                      *");
+
+            Console.WriteLine("* Вариант #3                                                         *");
+
+            Console.WriteLine("* Выполнил: Коровин Илья Константинович | ИСТНб-26-1                       *");
+
+            Console.WriteLine("*****************************************************************************");
+
+            Console.WriteLine("* УСЛОВИЕ:                                                                  *");
+
+            Console.WriteLine("   *");
+
+            Console.WriteLine("*                                                                          *");
+
+            Console.WriteLine("*****************************************************************************");
+
+            Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                          *");
+
+            Console.WriteLine("*****************************************************************************");
+
+
+            int startValue = -5;
+            int stopValue = 5;
+
+
+
+            Console.WriteLine("Страт шага = " + startValue);
+            Console.WriteLine("Конец конец = " + stopValue);
+
+            int len = ds.GetMassFunction(startValue, stopValue).Length;
+
+            double[] valueArray;
+            valueArray = new double[len];
+
+            valueArray = ds.GetMassFunction(startValue, stopValue);
+
+            Console.WriteLine("*****************************************************************************");
+
+            Console.WriteLine("* РЕЗУЛЬТАТ:                                                                 *");
+
+            Console.WriteLine("*****************************************************************************");
+
+            Console.WriteLine("+-----------+-----------+");
+            Console.WriteLine("|     X     |   f(x)    |");
+            Console.WriteLine("+-----------+-----------+");
+
+            for (int i = 0; i < valueArray.Length; i++)
+            {
+                Console.WriteLine("| {0,9} | {1,9:F2} |", startValue + i, valueArray[i]);
+            }
+            Console.ReadKey();
+        }
+    }
+}
